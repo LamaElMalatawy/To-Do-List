@@ -1,4 +1,17 @@
-# ToDoList
+# To Do List
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+A simple to do list in Angular
+
+
+![Screenshot 2023-07-29 155245](https://github.com/LamaElMalatawy/ToDoList/assets/74035870/067a64df-0734-4fc3-a1da-4e35d506cb36)
+
+## Features
+User can:
+<li>Add tasks</li>
+<li>Edit tasks</li>
+<li>Delete tasks</li>
+<li>Search for tasks</li>
+<li>Filter tasks</li>
+
+
 
