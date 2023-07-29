@@ -1,0 +1,36 @@
+<br>
+<div id="dropdown">
+
+  <select (change)="getSelectedOption($event)">
+    <option value="" disabled selected>Select a viewing filter</option>
+    <option value="All">All</option>
+    <option value="Completed">Completed</option>
+    <!-- <option value="History">History</option> -->
+  </select>
+</div>
+<div class="container p-5">
+    <br>
+    <input class="form-control" type="text" placeholder="Search Tasks" [(ngModel)] = "searchText" >
+    <br>
+    <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">Completed</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks | filterSearch:viewFilter | search:searchText"[style.textDecoration]="task.isCompleted ? 'line-through' : 'none'">
+            <td>{{task.name}}</td>
+            <td>{{task.creationDate}}</td>
+            <td><input id="taskStatus" type="checkbox" (change)="onChecked(task.name)"></td>
+            <td><button class="btn btn-primary btn-sm" (click)="editTask(task.name)">Edit</button></td>
+            <td><button class="btn btn-danger btn-sm" (click)="deleteTask(task.name)">Delete</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>

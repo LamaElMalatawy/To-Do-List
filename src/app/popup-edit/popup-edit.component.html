@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Edit Task</h2>
+<div mat-dialog-content>
+    <input [(ngModel)]="editTask" type="text" class="form-control" id="editTask" placeholder="Update Your Task" ngModel name="editTask">
+    <br>
+    <table>
+        <tr></tr>
+    </table>
+    <td>
+        <button (click)="onSubmit()" id="submitBtn"type="submit" class="btn btn-primary mb-2">Submit</button>
+    </td>
+    <td>
+        <button (click)="onClose()" id="closeBtn"type="submit" class="btn btn-danger mb-2">Close</button>
+    </td>
+
+</div>

@@ -1,0 +1,12 @@
+
+<div class="container">
+    <br>
+    <h2>Here are your tasks!</h2>
+    <br>
+    <form>
+      <div class="form-group mx-sm-3 mb-2">
+        <input [(ngModel)]="taskName" type="text" class="form-control" id="submitTask" placeholder="Enter Your Task" ngModel name="task">
+      </div>
+      <button (click)="onSubmit()" id="submitBtn"type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+    </div> 
